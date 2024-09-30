@@ -24,8 +24,7 @@ html {
 .content {
   display: flex;
   align-items: end;
-  max-width: 1140px;
-  max-height: 534px;
+  inline-size: 1140px;
   margin: 133px 30px 133px 30px;
 }
 
@@ -35,7 +34,7 @@ html {
 
 .result__video-container {
   min-width: 711px;
-  height: 388px;
+  height: 386px;
   position: relative;
 
 }
@@ -69,7 +68,7 @@ html {
   width: fit-content;
 }
 
-.search-form__label-text_checkbox:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -82,7 +81,7 @@ html {
   text-align: left;
   background: rgba(255, 255, 255, 0.7);
   appearance: none;
-  background-color: black;
+  background-color: transparent;
   border: none;
   border-block-start: 1px solid white;
   border-block-end: 1px solid white;
@@ -108,7 +107,7 @@ html {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  background-color: black;
+  background-color: transparent;
   border: 1px solid white;
   cursor: pointer;
   display: flex;
@@ -136,7 +135,7 @@ html {
   line-height: 21.6px;
   text-align: center;
   border: 1px solid white;
-  background-color: black;
+  background-color: transparent;
   color: white;
   cursor: pointer;
   min-height: 34px;
@@ -166,10 +165,6 @@ html {
   align-self: end;
 }
 
-.more-button-template {
-  display: block;
-}
-
 .more-button {
   width: 100%;
 }
@@ -180,7 +175,6 @@ html {
 }
 
 .title {
-  min-height: 210px;
   padding: 0px 139px 24px 0px;
   font-family: "Oswald", sans-serif;
   font-size: 75px;
@@ -191,7 +185,8 @@ html {
 }
 
 .content__accent {
-  color: grey;
+  color: rgba(84, 80, 80, 1);
+
 }
 
 .content__card-link {
@@ -207,7 +202,8 @@ html {
 }
 
 .content__card-link:active {
-  background-color: grey;
+  background-color: rgba(84, 80, 80, 1);
+  ;
   text-decoration: none;
 }
 
@@ -219,8 +215,12 @@ html {
   outline: 1px solid white;
 }
 
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1); 
+}
+
 .content__list {
-  width: 399px;
+  max-width: 399px;
   height: 298px;
   overflow: auto;
   position: relative;
@@ -235,6 +235,7 @@ html {
   align-items: start;
   justify-content: space-between;
   max-width: 398px;
+  padding-right: 2px;
 }
 
 .content__video-card-description-container {
@@ -247,12 +248,11 @@ html {
   line-height: 16.2px;
   text-transform: capitalize;
   font-size: 18px;
-  min-height: 65px;
 }
 
 
 .content__video-card-title {
-  width: 195px;
+  width: 190px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
@@ -263,7 +263,7 @@ html {
   font-style: normal;
   text-transform: uppercase;
   color: white; 
-  margin-bottom: 6px;
+  margin-block-end: 6px;
 }
 
 .content__video-card-thumbnail {
@@ -271,7 +271,6 @@ html {
   height: 103px;
   object-fit: cover;
   object-position: center;
-  padding: 2px 2px 2px 0px;
 }
 
 h1,
